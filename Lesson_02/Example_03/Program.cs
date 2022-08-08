@@ -24,7 +24,7 @@ int FindIndex(int[] Array, int findNumber)
 {
     int lengthArray = Array.Length;
     int count = 0;
-    int indexNumber = 0;
+    int indexNumber = -1;
     while (count < lengthArray)
     {
         if (Array[count] == findNumber)
