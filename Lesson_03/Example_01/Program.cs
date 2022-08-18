@@ -1,12 +1,11 @@
-﻿string text = "- Я думаю, - сказал князь, улыбаясь, - что, "
+﻿Console.Clear();
+
+string text = "- Я думаю, - сказал князь, улыбаясь, - что, "
             + "ежели бы вас послали вместо нашего милого Винценгероде,"
             + "вы бы взяли приступом согласие прусского короля. "
             + "Вы так крсноречивы. Вы дадите мне чаю?";
-// string s = "qwerty"
-//             012
-// s[3]// r
 
-string Replace(string text, char oldValue, char newValue)
+string ChangeChares(string text, char oldValue, char newValue)
 {
     string result = String.Empty;
 
@@ -18,3 +17,11 @@ string Replace(string text, char oldValue, char newValue)
     }
     return result;
 }
+
+Console.WriteLine(text);
+Console.WriteLine();
+text = ChangeChares(text, 'к', 'К');
+Console.WriteLine(text);
+Console.WriteLine();
+text = ChangeChares(text, 'с', 'С');
+Console.WriteLine(text);
