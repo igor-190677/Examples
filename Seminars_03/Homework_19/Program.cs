@@ -3,7 +3,7 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.WriteLine("Введите пятизначное число: ");
+Console.Write("Введите пятизначное число: ");
 string numberUser = Console.ReadLine();
 
 void FindPalindrom(string numberStr)
