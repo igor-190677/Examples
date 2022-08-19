@@ -2,7 +2,7 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-void PrintArrey(double result)
+void PrintResult(double result)
 {
     Console.Write("A ^ B = ");
     Console.Write(result);
@@ -22,4 +22,4 @@ Console.Write("Введите число B: ");
 string numberStringB = Console.ReadLine();
 int numberUserB = Convert.ToInt32(numberStringB);
 
-PrintArrey(FindDegree(numberUserA, numberUserB));
+PrintResult(FindDegree(numberUserA, numberUserB));
