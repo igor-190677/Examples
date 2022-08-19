@@ -12,11 +12,11 @@ void PrintArrey(double[] Array)
     for (int i = 1; i < Array.Length; i++) Console.Write(", " + Array[i]);
 }
 
-double[] FindSquads(int number)
+double[] FindCubes(int number)
 {
-    double[] numberSquads = new double[number];
-    for (int i = 0; i < (number); i++) numberSquads[i] = Math.Round(Math.Pow(i + 1, 3));
-    return numberSquads;
+    double[] numberCubes = new double[number];
+    for (int i = 0; i < (number); i++) numberCubes[i] = Math.Round(Math.Pow(i + 1, 3));
+    return numberCubes;
 }
 
-PrintArrey(FindSquads(numberUser));
+PrintArrey(FindCubes(numberUser));
