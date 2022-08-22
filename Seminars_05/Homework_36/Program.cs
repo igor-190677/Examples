@@ -25,7 +25,6 @@ int[] GenerationArray(int numberCells)
 
 int SumNumber(int[] numberCells)
 {
-    Console.WriteLine();
     int count = 0;
     for (int i = 0; i < numberCells.Length; i++)
     {
