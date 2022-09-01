@@ -31,5 +31,6 @@ void PrintArray(double[,] ArreyUser)
 int stringArray = 3;
 int columnsArray = 4;
 double[,] userArray = new double[stringArray, columnsArray];
+
 CompletionArray(userArray);
 PrintArray(userArray);
