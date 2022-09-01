@@ -4,25 +4,25 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-void CompletionArray(double[,] ArreyUser)
+void CompletionArray(double[,] arreyUser)
 {
-    for (int i = 0; i < ArreyUser.GetLength(0); i++)
+    for (int i = 0; i < arreyUser.GetLength(0); i++)
     {
-        for (int j = 0; j < ArreyUser.GetLength(1); j++)
+        for (int j = 0; j < arreyUser.GetLength(1); j++)
         {
             double number = new Random().NextDouble() * 10;
-            ArreyUser[i, j] = Math.Round(number, 1);
+            arreyUser[i, j] = Math.Round(number, 1);
         }
     }
 }
 
-void PrintArray(double[,] ArreyUser)
+void PrintArray(double[,] arreyUser)
 {
-    for (int i = 0; i < ArreyUser.GetLength(0); i++)
+    for (int i = 0; i < arreyUser.GetLength(0); i++)
     {
-        for (int j = 0; j < ArreyUser.GetLength(1); j++)
+        for (int j = 0; j < arreyUser.GetLength(1); j++)
         {
-            Console.Write($"{ArreyUser[i,j]}  ");
+            Console.Write($"{arreyUser[i,j]}  ");
         }
     Console.WriteLine();
     }
