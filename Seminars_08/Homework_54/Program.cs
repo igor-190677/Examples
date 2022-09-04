@@ -8,28 +8,28 @@
 // 9 5 3 2
 // 8 4 4 2
 
-void PrintArray(int[,] arreyUser)
+void PrintArray(int[,] arrayUser)
 {
-    for (int i = 0; i < arreyUser.GetLength(0); i++)
+    for (int i = 0; i < arrayUser.GetLength(0); i++)
     {
-        for (int j = 0; j < arreyUser.GetLength(1); j++)
+        for (int j = 0; j < arrayUser.GetLength(1); j++)
         {
-            Console.Write($"{arreyUser[i,j]}  ");
+            Console.Write($"{arrayUser[i,j]}  ");
         }
     Console.WriteLine();
     }
 }
 
-int[,] SortNumbersSting(int[,] arreyUser)
+int[,] SortNumbersSting(int[,] arrayUser)
 {
-    int[,] sortArray = new int[arreyUser.GetLength(0), arreyUser.GetLength(1)];
-    int[] singleArray = new int[arreyUser.GetLength(1)];
-    for (int i = 0; i < arreyUser.GetLength(0); i++)
+    int[,] sortArray = new int[arrayUser.GetLength(0), arrayUser.GetLength(1)];
+    int[] singleArray = new int[arrayUser.GetLength(1)];
+    for (int i = 0; i < arrayUser.GetLength(0); i++)
     {
         
-        for (int j = 0; j < arreyUser.GetLength(1); j++)
+        for (int j = 0; j < arrayUser.GetLength(1); j++)
         {
-            singleArray[j] = arreyUser[i, j];
+            singleArray[j] = arrayUser[i, j];
         }
         Array.Sort(singleArray);
         Array.Reverse(singleArray);
