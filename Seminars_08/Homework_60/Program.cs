@@ -5,11 +5,6 @@
 // 27(1,0,0) 90(1,0,1)
 // 26(1,1,0) 55(1,1,1)
 
-using System;
-using System.Linq;
-
-
-
 void PrintArreyAndIndex(int[,,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
@@ -24,7 +19,6 @@ void PrintArreyAndIndex(int[,,] array)
         }
     }
 }
-
 
 void FillArray(int[,,] array)
 {
