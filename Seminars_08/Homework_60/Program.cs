@@ -5,31 +5,51 @@
 // 27(1,0,0) 90(1,0,1)
 // 26(1,1,0) 55(1,1,1)
 
+using System;
+using System.Linq;
 
-void PrintArreyAndIndex(int[,,] arrey)
+
+
+void PrintArreyAndIndex(int[,,] array)
 {
-    for (int i = 0; i < arrey.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < arrey.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             Console.WriteLine();
-            for (int k = 0; k < arrey.GetLength(2); k++)
+            for (int k = 0; k < array.GetLength(2); k++)
             {
-                Console.Write($"{arrey[i, j, k]}({i}, {j}, {k})");
+                Console.Write($"{array[i, j, k]} ({i}, {j}, {k})  ");
             }
         }
     }
 }
 
-void FillArray(int[,,] arrey)
+
+void FillArray(int[,,] array)
 {
-    for (int i = 0; i < arrey.GetLength(0); i++)
+    int number = 0;
+    int[] singleArray = new int[array.GetLength(0) * array.GetLength(1) * array.GetLength(2)];
+    int count = 0;
+    int index = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < arrey.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = 0; k < arrey.GetLength(2); k++)
+            for (int k = 0; k < array.GetLength(2); k++)
             {
-                arrey[i, j, k] = new Random().Next(1, 100);
+                index = 0;
+                while (index != 1)
+                {
+                    number = new Random().Next(1, 100);
+                    if (Array.IndexOf(singleArray, number) == -1)
+                    {
+                        array[i, j, k] = number;
+                        singleArray[count] = number;
+                        count++;
+                        index = 1;
+                    }
+                }
             }
         }
     }
