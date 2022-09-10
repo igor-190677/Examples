@@ -2,15 +2,22 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-void CounterNumbers(int numb)
+int[] InputNumbers(int[] array)
 {
-    int numberUser = 0;
-    int counter = 0;
-    for (int i = 0; i < numb; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.Write("Введите отрицательное или положительное целое число: ");
-        numberUser = Convert.ToInt16(Console.ReadLine());
-        if (numberUser > 0) counter++;
+        Console.Write($"Введи {i+1} число: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return array;
+}
+
+void Comparison(int[] arrayNumbers)
+{
+    int counter = 0;
+    for (int i = 0; i < arrayNumbers.Length; i++)
+    {
+        if(arrayNumbers[i] > 0 ) counter++; 
     }
     Console.WriteLine();
     Console.WriteLine($"Чисел пользователя больше ноля: {counter}");
@@ -20,4 +27,7 @@ Console.Write("Сколько чисел вы будете вводить: ");
 int number = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine();
 
-CounterNumbers(number);
+int[] arrayNumbers = new int[number];
+
+arrayNumbers = InputNumbers(arrayNumbers);
+Comparison(arrayNumbers);
